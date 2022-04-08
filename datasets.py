@@ -32,5 +32,5 @@ print(dataset.groupby('class').size())
 #Plotting
 dataset.plot(kind='box',subplots=True, layout=(2,2), sharex=False, sharey=False)
 dataset.hist()
-pyplot.scatter(dataset)
+scatter_matrix(dataset)
 pyplot.show()
