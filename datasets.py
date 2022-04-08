@@ -28,5 +28,5 @@ print(last_row)
 print(dataset.groupby('class').size())
 
 #Plotting
-dataset.plot(kind='box',subplots=True, layout=(2,2), sharex=True, sharey=True)
+dataset.plot(kind='box',subplots=True, layout=(2,2), sharex=False, sharey=False)
 pyplot.show()
