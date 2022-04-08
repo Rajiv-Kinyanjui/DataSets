@@ -1,6 +1,8 @@
+from tkinter import Y
 from pandas import read_csv
 from pandas.plotting import scatter_matrix
 from matplotlib import pyplot
+from sklearn import datasets
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import StratifiedKFold
@@ -30,4 +32,5 @@ print(dataset.groupby('class').size())
 #Plotting
 dataset.plot(kind='box',subplots=True, layout=(2,2), sharex=False, sharey=False)
 dataset.hist()
+pyplot.scatter(dataset)
 pyplot.show()
