@@ -26,3 +26,7 @@ print(dataset.head(50))
 print(dataset.describe())
 print(last_row)
 print(dataset.groupby('class').size())
+
+#Plotting
+dataset.plot(kind='box',subplots=True, layout=(2,2), sharex=False, sharey=False)
+pyplot.show()
