@@ -20,3 +20,9 @@ names = ['sepal_length','sepal_width','petal_length','petal-width','class']
 dataset = read_csv(url, names=names)
 last_row = dataset.iloc[-1:]#getting last row output
 
+#slope
+print(dataset.shape)
+print(dataset.head(50))
+print(dataset.describe())
+print(last_row)
+print(dataset.groupby('class').size())
