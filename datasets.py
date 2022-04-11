@@ -63,3 +63,19 @@ for name,model in models:
     results.append(CV_results)
     names.append(name)
     print('%s:%f(%f)' %(name,CV_results.mean(), CV_results.std()))
+
+
+    #Compare Algorithms
+    pyplot.boxplot(results,labels=names)
+    pyplot.title('Algorithm Comparison')
+    #pyplot.show()
+
+    #Make prediction on Validation Set
+    model = SVC(gamma = 'auto')
+    model.fit(X_train, Y_train)
+    predictions = model.predict(X_validation)
+
+    #Evaluate predictions
+    print(accuracy_score(Y_validation,predictions))
+    print(confusion_matrix(Y_validation,predictions))
+    print(classification_report(Y_validation,predictions))
